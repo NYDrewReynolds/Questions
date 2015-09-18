@@ -1,0 +1,15 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: black;
+    color: white;
+}
+
+.title-box {
+    height: 50px;
+    text-align: center;
+    margin: 20px;
+}
+
+.panel {
+    color: black;
+}
