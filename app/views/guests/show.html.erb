@@ -1,1 +1,17 @@
-<h1><%= @guest.name %></h1>
+<div class="container">
+  <div class="guest-name text-center">
+    <h1><%= @guest.name %></h1>
+  </div>
+
+  <div class="questions">
+    <ul>
+      <% @guest.questions.each do |question| %>
+          <li>
+            <h3><%= question.title %></h3>
+
+            <p><%= question.body %></p>
+          </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
