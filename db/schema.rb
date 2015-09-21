@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 20150918204630) do
 
   create_table "guests", force: :cascade do |t|
     t.string   "name"
+    t.string   "image_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
