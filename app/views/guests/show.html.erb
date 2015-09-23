@@ -1,17 +1,24 @@
 <div class="container">
   <div class="guest-name text-center">
+    <center><img src="<%= @guest.image_url %>" class="img-responsive"></center>
     <h1><%= @guest.name %></h1>
   </div>
 
-  <div class="questions">
-    <ul>
-      <% @guest.questions.each do |question| %>
-          <li>
-            <h3><%= question.title %></h3>
-
-            <p><%= question.body %></p>
-          </li>
-      <% end %>
-    </ul>
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <div class="questions">
+        <ul class="list-group">
+          <% @guest.questions.each do |question| %>
+              <li class="list-group-item">
+                <%= question.title %>
+                <ul class="list-group-submenu">
+                  <li class="list-group-submenu-item success"><span class="glyphicon glyphicon-chevron-up"></span></li>
+                  <li class="list-group-submenu-item danger"><span class="glyphicon glyphicon-chevron-down"></span></li>
+                </ul>
+              </li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
   </div>
 </div>
